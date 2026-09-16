@@ -88,12 +88,15 @@ The scope editor follows the kind too: a Finding trigger's scope opens the Findi
 
 ## Triggers and scope
 
-Every graph starts with one of four triggers.
+Every graph starts with exactly one trigger.
 
 * **On Finding Event** wakes the rule when Findings are created, updated, closed or reopened. Choose which of those in the node's **Event** setting, or `any` for all four.
 * **On Asset Event** wakes the rule when Assets are created or updated, tag changes included.
 * **On a Schedule** sweeps everything in scope on a recurring schedule, Findings or Assets per its **Sweep Over** setting.
 * **Manual Run** sweeps everything in scope when you press **Run** on the rule, Findings or Assets per its **Sweep Over** setting.
+* **On a Missing Scan** runs on a schedule and reports Assets whose expected scan has not arrived.
+* **When a Scan Has Landed** wakes the rule once for each scan import that finishes, or fails, on an Asset in scope.
+* **When a Group of Scans Has Landed** waits for a set of scan types to finish importing into an Asset and wakes the rule once for the whole group, down a `complete` or `incomplete` output. See the [Node Reference](../node_reference/) for how a group is defined and what happens when a scan fails or never arrives.
 
 ### Scope
 
