@@ -325,6 +325,8 @@ Templates also see a `ctx` block carrying details about the run itself. The keys
 | `{{ctx.findings_html}}` | The rendered Finding list, in the email node |
 | `{{ctx.report_url}}` | The download link, in the report node |
 | `{{ctx.template_name}}` | The report template name, in the report node |
+| `{{ctx.imports_html}}` | The rendered list of a scan group's imports and how each ended, in the email node |
+| `{{ctx.import_summary}}` | One line about a scan group, for example "3 of 4 feeds arrived; missing: ZAP Scan" |
 
 Templates are plain substitution. There is no expression evaluation, no code execution, and no attribute access on objects anywhere in a rule config.
 
